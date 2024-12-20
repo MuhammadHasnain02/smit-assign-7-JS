@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Time</title>
+
+    <style>
+        #container{
+            color: white;
+            font-family: Arial;
+            background-color: rgb(58, 58, 58);
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 500px;
+            margin-right: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="container">
+    </div>
+
+<script>
+
+setInterval(function(){
+
+    let currdate = new Date()
+
+    let monthnames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","oct","Nov","Dec"]
+
+    let date   = currdate.getDate();
+    let month  = monthnames[currdate.getMonth()]
+    let year   = currdate.getFullYear();
+    let hour   = currdate.getHours();
+    let minute = currdate.getMinutes();
+    let second = currdate.getSeconds();
+
+    let fulltimeprt = `${date} ${month} ${year} ${hour} : ${minute} : ${second}`
+    console.log(fulltimeprt)
+    document.getElementById("container").innerText = fulltimeprt
+
+},1000)
+
+</script>
+
+</body>
+</html>
